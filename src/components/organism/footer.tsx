@@ -20,7 +20,7 @@ export const Footer = async () => {
       <div className="flex items-center border-r divide-x">
         <Link
           target="_blank"
-          href="https://github.com/wiscaksono/wiscaksono-site"
+          href="https://github.com/frantanius/me"
           className="flex items-center gap-x-2 px-2 py-1 hover:text-foreground text-muted-foreground transition-colors"
         >
           <BiGitBranch className="text-lg" />

@@ -151,10 +151,10 @@ export const navMenu = [
         name: 'Next',
         path: '/projects?tag=next',
       },
-      {
-        name: 'HTML',
-        path: '/projects?tag=html',
-      },
+      // {
+      //   name: 'HTML',
+      //   path: '/projects?tag=html',
+      // },
     ],
   },
 ];
