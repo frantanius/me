@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useEffect } from 'react';
+import { motion, stagger, useAnimate } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface ITextGenerateEffect {
   words: string;
@@ -22,16 +22,16 @@ export const TextGenerateEffect = ({
 
   useEffect(() => {
     animate(
-      "span",
+      'span',
       {
         opacity: 1,
       },
       {
         duration: duration,
         delay: stagger(delay),
-      }
+      },
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scope.current]);
 
   const renderWords = () => {
@@ -51,9 +51,5 @@ export const TextGenerateEffect = ({
     );
   };
 
-  return (
-    <div className={cn(className)}>
-      {renderWords()}
-    </div>
-  );
+  return <div className={cn(className)}>{renderWords()}</div>;
 };

@@ -16,7 +16,7 @@ const TerminalEducations = (): JSX.Element => {
   ];
 
   return (
-    <ol className='mb-1 pl-4'>
+    <ol className="mb-1 pl-4">
       {data.map((education) => (
         <li key={uuidv4()} className="mb-1">
           <h1 data-testid="school-name">{education.attributes.name}</h1>

@@ -5,9 +5,7 @@ const TerminalHelp = (): JSX.Element => {
     <div className="flex gap-8">
       <TerminalAscii />
       <div className="flex flex-col">
-        <span className="text-accent-1">
-          version 14.0.4
-        </span>
+        <span className="text-accent-1">version 14.0.4</span>
         <span>usage: fe [option]</span>
         <div className="mt-2">
           <span className="text-accent-1">all options:</span>

@@ -1,8 +1,8 @@
+// prettier-ignore
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const TerminalAscii = (): JSX.Element => {
-  const ascii =
-  `
+  const ascii = `
                     :=+#%@@@@@@%#*=:
                   .=#@@@@@@@@@@@@@@@@@@#=.
                 -#@@@@@@@@@@@@@@@@@@@@@@@@#-

@@ -45,7 +45,7 @@ const TerminalExperience = (): JSX.Element => {
   ];
 
   return (
-    <ol className='mb-1 pl-4'>
+    <ol className="mb-1 pl-4">
       {data?.map((experience) => (
         <li className="mb-2" key={uuidv4()}>
           <h1>{experience.role}</h1>

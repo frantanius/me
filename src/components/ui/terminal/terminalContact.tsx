@@ -17,7 +17,7 @@ const TerminalContact = (): JSX.Element => {
   ];
 
   return (
-    <ol className='mb-1 pl-4'>
+    <ol className="mb-1 pl-4">
       {contacts.map((contact) => (
         <li key={uuidv4()}>
           <a
