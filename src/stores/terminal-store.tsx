@@ -1,4 +1,4 @@
-import TerminalHelp from '@/components/terminal/terminalHelp';
+import TerminalHelp from '@/components/ui/terminal/terminalHelp';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 import { Prompt } from '@/types/terminal';
