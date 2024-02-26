@@ -1,8 +1,9 @@
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 const TerminalAscii = (): JSX.Element => {
-  return (
-    <pre className="hidden text-xs sm:block">
-      {`
-                      :=+#%@@@@@@%#*=:
+  const ascii =
+  `
+                    :=+#%@@@@@@%#*=:
                   .=#@@@@@@@@@@@@@@@@@@#=.
                 -#@@@@@@@@@@@@@@@@@@@@@@@@#-
               :%@@@@@@@@@@@@@@@@@@@@@@@@@@@@%-
@@ -21,9 +22,10 @@ const TerminalAscii = (): JSX.Element => {
               -%@@@@@@@@@@@@@@@@@@@@@@###%@@%-
                 -%@@@@@@@@@@@@@@@@@@@@@@%@%-
                   .+#@@@@@@@@@@@@@@@@@@%+:
-                      :=*#%@@@@@@%#*=:
-
-      `}
+                      :=*#%@@@@@@%#*=:`;
+  return (
+    <pre className="hidden text-xs sm:block">
+      <TextGenerateEffect duration={0} delay={0.01} words={ascii} />
     </pre>
   );
 };
