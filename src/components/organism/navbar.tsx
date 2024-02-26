@@ -11,7 +11,7 @@ export const Navbar = () => {
         href="/"
         className="md:border-r md:px-5 px-2.5 py-4 text-foreground md:col-span-3 lg:col-span-2 shrink-0 transition-colors"
       >
-        <Image src='/myLogo2.png' alt='logo' width={35} height={35} />
+        <Image src="/myLogo2.png" alt="logo" width={35} height={35} />
       </Link>
       <div className="md:col-span-9 lg:col-span-10 flex items-center justify-between">
         <ul className="md:flex items-center divide-x w-max border-r hidden shrink-0">
