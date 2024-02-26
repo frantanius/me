@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
-import { ThemeWrapper } from '@/components/atoms/theme-wrapper';
+import { ThemeWrapper } from '@/components/theme-wrapper';
 import { Navbar } from '@/components/organism/navbar';
 import {
   NavbarMobile,
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeWrapper
           attribute="class"
           defaultTheme="system"

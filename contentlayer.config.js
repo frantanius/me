@@ -4,6 +4,7 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
+/** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   slug: {
     type: 'string',
@@ -11,6 +12,7 @@ const computedFields = {
   },
 };
 
+/** @type {import('contentlayer/source-files').defineDocumentType} */
 const About = defineDocumentType(() => ({
   name: 'About',
   filePathPattern: `about/**/*.mdx`,
@@ -22,6 +24,7 @@ const About = defineDocumentType(() => ({
   computedFields,
 }));
 
+/** @type {import('contentlayer/source-files').defineDocumentType} */
 const Projects = defineDocumentType(() => ({
   name: 'Projects',
   filePathPattern: `projects/**/*.mdx`,
@@ -39,16 +42,16 @@ const Projects = defineDocumentType(() => ({
   computedFields,
 }));
 
+/** @type {import('rehype-pretty-code').Options} */
 const rehypePrettyOptions = {
-  defaultLang: 'javascript',
-  defaultColor: 'dark',
   theme: {
     dark: 'github-dark-dimmed',
     light: 'github-light',
   },
-  keepBackground: false,
+  keepBackground: true,
 };
 
+/** @type {import('contentlayer/source-files').SourcePlugin} */
 export default makeSource({
   contentDirPath: './src/content',
   documentTypes: [About, Projects],

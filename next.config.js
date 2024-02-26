@@ -1,23 +1,25 @@
-import { withContentlayer } from 'next-contentlayer';
+const { withContentlayer } = require('next-contentlayer')
 
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  transpilePackages: ['lucide-react'],
   experimental: {
     webpackBuildWorker: true,
     serverActions: {
-      enabled: true,
-    },
+      enabled: true
+    }
   },
   redirects() {
     return [
       {
         source: '/about',
         destination: '/about/about.ts',
-        permanent: true,
-      },
-    ];
-  },
-};
+        permanent: true
+      }
+    ]
+  }
+}
 
-export default withContentlayer(nextConfig);
+module.exports = withContentlayer(nextConfig)

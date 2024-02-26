@@ -1,8 +1,6 @@
-
 # Me.
 
 A portfolio website build with next.js
-
 
 ## Installation
 
@@ -15,4 +13,3 @@ Install my-project with pnpm
   pnpm build
   pnpm dev
 ```
-    
