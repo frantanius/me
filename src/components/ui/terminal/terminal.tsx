@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useTheme } from 'next-themes';
 import { v4 as uuidv4 } from 'uuid';
 import LenisProvider from '@/lib/react-lenis';
 import { transition } from '@/constants/framer-motion';
@@ -14,12 +15,15 @@ interface TerminalProps {
 }
 
 const Terminal = ({ className = '', style }: TerminalProps): JSX.Element => {
+  const { theme } = useTheme();
   const prompts = useTerminalStore((state) => state.prompts);
 
   const [prevLength, setPrevLength] = useState<number>(prompts.length);
 
   const terminalRef = useRef<HTMLDivElement>(null);
   const promptRef = useRef<HTMLInputElement>(null);
+
+  const isLight = theme === 'light';
 
   const { scrollYProgress } = useScroll({
     target: terminalRef,
@@ -50,10 +54,9 @@ const Terminal = ({ className = '', style }: TerminalProps): JSX.Element => {
       style={style}
       ref={terminalRef}
       onClick={() => promptRef.current?.focus()}
-      className={`${className} h-[32rem] w-full overflow-hidden rounded-lg border border-white bg-primary bg-opacity-50 font-mono text-sm text-gray-300 backdrop-blur-lg backdrop-filter`}
+      className={`${className} h-[32rem] w-full overflow-hidden rounded-lg border border-white ${isLight ? 'bg-primary' : ''} bg-opacity-50 font-mono text-sm text-gray-300 backdrop-blur-lg backdrop-filter`}
       data-testid="terminal"
     >
-      {/* <div className="absolute z-20 h-full w-full opacity-20 [filter:url('#grainyTexture2')]" /> */}
       <div className="sticky flex gap-2 p-3">
         <div
           className="aspect-square w-3 rounded-full bg-red-500"

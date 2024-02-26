@@ -31,9 +31,9 @@ const TerminalPrompt = forwardRef<HTMLInputElement, Prompt & { index: number }>(
         <div className="flex justify-between">
           <div className="flex">
             <span className="text-indigo-400">&nbsp;</span>
-            <span className="text-accent-1">rezaa</span>
+            <span className="text-accent-1">franz</span>
             <span className="text-gray-200">@</span>
-            <span className="text-rose-400">xe&nbsp;</span>
+            <span className="text-rose-400">fe&nbsp;</span>
             <span className="text-accent-2">~</span>
           </div>
           <span
@@ -41,7 +41,7 @@ const TerminalPrompt = forwardRef<HTMLInputElement, Prompt & { index: number }>(
             className="flex items-center gap-1 text-accent-3"
           >
             <TbBrandNextjs />
-            <span>v{process.env.NEXT_PUBLIC_NEXT_VERSION}</span>
+            <span>v14.0.4</span>
           </span>
         </div>
         <form onSubmit={handleSubmit(submitPrompt)}>

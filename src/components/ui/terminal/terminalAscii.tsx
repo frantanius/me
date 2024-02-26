@@ -27,4 +27,5 @@ const TerminalAscii = (): JSX.Element => {
     </pre>
   );
 };
+
 export default TerminalAscii;

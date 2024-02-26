@@ -10,7 +10,7 @@ const TerminalError = ({ command, option }: ErrorPrompt): JSX.Element => {
         {command !== undefined ? 'command' : 'option'} not found:&nbsp;
         {command ?? option}
       </span>
-      <span>try &quot;xe --help&quot;</span>
+      <span>try &quot;fe --help&quot;</span>
     </div>
   );
 };

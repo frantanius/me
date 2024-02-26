@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require('next-contentlayer');
 
 /**
  * @type {import('next').NextConfig}
@@ -8,18 +8,18 @@ const nextConfig = {
   experimental: {
     webpackBuildWorker: true,
     serverActions: {
-      enabled: true
-    }
+      enabled: true,
+    },
   },
   redirects() {
     return [
       {
         source: '/about',
         destination: '/about/about.ts',
-        permanent: true
-      }
-    ]
-  }
-}
+        permanent: true,
+      },
+    ];
+  },
+};
 
-module.exports = withContentlayer(nextConfig)
+module.exports = withContentlayer(nextConfig);

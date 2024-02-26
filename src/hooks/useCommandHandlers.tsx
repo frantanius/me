@@ -1,11 +1,10 @@
-import TerminalContact from '@/components/terminal/terminalContact';
-import TerminalEducations from '@/components/terminal/terminalEducations';
-import TerminalError from '@/components/terminal/terminalError';
-import TerminalExperience from '@/components/terminal/terminalExperience';
-import TerminalHelp from '@/components/terminal/terminalHelp';
-import TerminalProjects from '@/components/terminal/terminalProjects';
-import TerminalSkills from '@/components/terminal/terminalSkills';
-import TerminalSummary from '@/components/terminal/terminalSummary';
+import TerminalContact from '@/components/ui/terminal/terminalContact';
+import TerminalEducations from '@/components/ui/terminal/terminalEducations';
+import TerminalError from '@/components/ui/terminal/terminalError';
+import TerminalExperience from '@/components/ui/terminal/terminalExperience';
+import TerminalHelp from '@/components/ui/terminal/terminalHelp';
+import TerminalSkills from '@/components/ui/terminal/terminalSkills';
+import TerminalSummary from '@/components/ui/terminal/terminalSummary';
 import useTerminalStore from '@/stores/terminal-store';
 
 type CommandHandlers = (index: number, input: string) => void;
@@ -20,7 +19,7 @@ const useCommandHandlers = (): CommandHandlers => {
   const handle: CommandHandlers = (index, input) => {
     const [command, option, ...args] = input.split(' ');
 
-    if (command === 'xe') {
+    if (command === 'fe') {
       if (
         option === '' ||
         option === '--help' ||
@@ -35,36 +34,12 @@ const useCommandHandlers = (): CommandHandlers => {
           children: <TerminalSummary />,
         });
       } else if (option === 'skills') {
-        let categoryId: number | null = null;
-
-        switch (args[0]) {
-          case '--langs':
-            categoryId = 1;
-            break;
-          case '--tools':
-            categoryId = 2;
-            break;
-          case '--libs':
-            categoryId = 3;
-            break;
-          case '--tests':
-            categoryId = 4;
-            break;
-          default:
-            categoryId = null;
-            break;
-        }
-
         updatePrompt(index, {
-          children: <TerminalSkills categoryId={categoryId} />,
+          children: <TerminalSkills />,
         });
       } else if (option === 'experience') {
         updatePrompt(index, {
           children: <TerminalExperience />,
-        });
-      } else if (option === 'projects') {
-        updatePrompt(index, {
-          children: <TerminalProjects />,
         });
       } else if (option === 'educations') {
         updatePrompt(index, {
