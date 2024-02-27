@@ -1,14 +1,14 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import LucideIcon from '@/components/atoms/lucide-icon';
-import { Button } from '@/components/atoms/button';
+import LucideIcon from '@/app/ui/lucide-icon';
+import { Button } from '@/app/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/atoms/dropdown-menu';
+} from '@/app/ui/dropdown-menu';
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();

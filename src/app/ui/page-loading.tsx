@@ -1,4 +1,4 @@
-import LucideIcon from '@/components/atoms/lucide-icon';
+import LucideIcon from '@/app/ui/lucide-icon';
 
 export const PageLoading = () => {
   return (

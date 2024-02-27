@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { NavLink } from '@/components/atoms/nav-link';
-import { ThemeToggle } from '@/components/molecules/theme-toggler';
+import { NavLink } from '@/app/ui/nav-link';
+import { ThemeToggle } from '@/app/ui/layout/theme-toggler';
 import { NavbarMobileBtn } from './navbar-mobile';
 
 export const Navbar = () => {

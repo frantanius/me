@@ -1,7 +1,7 @@
-import TerminalHelp from '@/components/ui/terminal/terminalHelp';
+import TerminalHelp from '@/app/ui/home/terminal/terminalHelp';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
-import { Prompt } from '@/types/terminal';
+import { Prompt } from '@/app/types/terminal';
 
 interface TerminalState {
   prompts: Prompt[];

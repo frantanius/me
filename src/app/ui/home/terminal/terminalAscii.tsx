@@ -29,7 +29,7 @@ interface ITerminalAscii {
   isInitial: boolean;
 }
 
-const TerminalAscii = ({ isInitial }:ITerminalAscii): JSX.Element => {
+const TerminalAscii = ({ isInitial }: ITerminalAscii): JSX.Element => {
   const [scope, animate] = useAnimate();
   let wordsArray = ascii.split('');
 
@@ -64,7 +64,11 @@ const TerminalAscii = ({ isInitial }:ITerminalAscii): JSX.Element => {
     </motion.div>
   );
 
-  return <pre className="hidden text-xs sm:block">{isInitial ? renderWords() : ascii}</pre>;
+  return (
+    <pre className="hidden text-xs sm:block">
+      {isInitial ? renderWords() : ascii}
+    </pre>
+  );
 };
 
 export default TerminalAscii;

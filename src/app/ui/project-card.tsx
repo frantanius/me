@@ -8,9 +8,9 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogFooter,
-} from '@/components/atoms/dialog';
-import { Badge } from '@/components/atoms/badge';
-import { buttonVariants } from '@/components/atoms/button';
+} from '@/app/ui/dialog';
+import { Badge } from '@/app/ui/badge';
+import { buttonVariants } from '@/app/ui/button';
 import { Projects } from 'contentlayer/generated';
 
 export const ProjectCard = ({ data }: { data: Projects }) => {

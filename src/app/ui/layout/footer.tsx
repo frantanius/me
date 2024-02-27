@@ -8,7 +8,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/atoms/tooltip';
+} from '@/app/ui/tooltip';
 // import { weeklyCodingActivity } from '@/lib/actions';
 
 export const Footer = async () => {

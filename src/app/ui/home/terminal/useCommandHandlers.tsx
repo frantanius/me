@@ -1,11 +1,11 @@
-import TerminalContact from '@/components/ui/terminal/terminalContact';
-import TerminalEducations from '@/components/ui/terminal/terminalEducations';
-import TerminalError from '@/components/ui/terminal/terminalError';
-import TerminalExperience from '@/components/ui/terminal/terminalExperience';
-import TerminalHelp from '@/components/ui/terminal/terminalHelp';
-import TerminalSkills from '@/components/ui/terminal/terminalSkills';
-import TerminalSummary from '@/components/ui/terminal/terminalSummary';
-import useTerminalStore from '@/components/ui/terminal/terminal-store';
+import TerminalContact from '@/app/ui/home/terminal/terminalContact';
+import TerminalEducations from '@/app/ui/home/terminal/terminalEducations';
+import TerminalError from '@/app/ui/home/terminal/terminalError';
+import TerminalExperience from '@/app/ui/home/terminal/terminalExperience';
+import TerminalHelp from '@/app/ui/home/terminal/terminalHelp';
+import TerminalSkills from '@/app/ui/home/terminal/terminalSkills';
+import TerminalSummary from '@/app/ui/home/terminal/terminalSummary';
+import useTerminalStore from '@/app/ui/home/terminal/terminal-store';
 
 type CommandHandlers = (index: number, input: string) => void;
 

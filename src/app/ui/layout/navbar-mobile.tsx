@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import { Fragment, createContext, useContext, useState } from 'react';
-import LucideIcon from '@/components/atoms/lucide-icon';
-import { FadeIn, AnimatePresence } from '@/components/atoms/fade-in';
+import LucideIcon from '@/app/ui/lucide-icon';
+import { FadeIn, AnimatePresence } from '@/app/ui/fade-in';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/atoms/accordion';
+} from '@/app/ui/accordion';
 
 interface NavbarMobileContextProps {
   isOpen: boolean;

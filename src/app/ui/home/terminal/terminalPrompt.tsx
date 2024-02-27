@@ -1,9 +1,9 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { type SubmitHandler, useForm } from 'react-hook-form';
-import useCommandHandlers from '@/components/ui/terminal/useCommandHandlers';
+import useCommandHandlers from '@/app/ui/home/terminal/useCommandHandlers';
 import { mergeRefs } from 'react-merge-refs';
-import { Prompt } from '@/types/terminal';
+import { Prompt } from '@/app/types/terminal';
 
 interface InputPrompt {
   input: string;

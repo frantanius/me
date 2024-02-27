@@ -5,13 +5,10 @@ import { Analytics } from '@vercel/analytics/react';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
-import { ThemeWrapper } from '@/components/theme-wrapper';
-import { Navbar } from '@/components/organism/navbar';
-import {
-  NavbarMobile,
-  NavbarProvider,
-} from '@/components/organism/navbar-mobile';
-import { Footer } from '@/components/organism/footer';
+import { ThemeWrapper } from '@/app/ui/theme-wrapper';
+import { Navbar } from '@/app/ui/layout/navbar';
+import { NavbarMobile, NavbarProvider } from '@/app/ui/layout/navbar-mobile';
+import { Footer } from '@/app/ui/layout/footer';
 
 export const metadata: Metadata = {
   title: {

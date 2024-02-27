@@ -2,11 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
-import LenisProvider from '@/lib/react-lenis';
-import { transition } from '@/constants/framer-motion';
+import LenisProvider from '@/app/lib/react-lenis';
 import { useScroll, type MotionStyle, motion } from 'framer-motion';
-import useTerminalStore from '@/components/ui/terminal/terminal-store';
-import TerminalPrompt from '@/components/ui/terminal/terminalPrompt';
+import useTerminalStore from '@/app/ui/home/terminal/terminal-store';
+import TerminalPrompt from '@/app/ui/home/terminal/terminalPrompt';
 
 interface TerminalProps {
   className?: string;
@@ -49,7 +48,17 @@ const Terminal = ({ className = '', style }: TerminalProps): JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0, transition: { ...transition, delay: 0.4 } }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: 'spring',
+          stiffness: 300,
+          damping: 50,
+          restDelta: 0.001,
+          delay: 0.4,
+        },
+      }}
       style={style}
       ref={terminalRef}
       onClick={() => promptRef.current?.focus()}

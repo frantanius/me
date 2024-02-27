@@ -2,8 +2,8 @@
 
 import { forwardRef } from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import LucideIcon from '@/components/atoms/lucide-icon';
-import { cn } from '@/lib/utils';
+import LucideIcon from '@/app/ui/lucide-icon';
+import { cn } from '@/app/lib/utils';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 

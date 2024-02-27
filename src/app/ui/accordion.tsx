@@ -2,8 +2,8 @@
 
 import { forwardRef } from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import LucideIcon from '@/components/atoms/lucide-icon';
-import { cn } from '@/lib/utils';
+import LucideIcon from '@/app/ui/lucide-icon';
+import { cn } from '@/app/lib/utils';
 
 const Accordion = AccordionPrimitive.Root;
 

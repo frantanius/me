@@ -1,9 +1,5 @@
-import { ProjectCardSkeleton } from '@/components/molecules/project-card';
-import {
-  FadeIn,
-  FadeInStagger,
-  AnimatePresence,
-} from '@/components/atoms/fade-in';
+import { ProjectCardSkeleton } from '@/app/ui/project-card';
+import { FadeIn, FadeInStagger, AnimatePresence } from '@/app/ui/fade-in';
 
 export default function Loading() {
   return (
