@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const TerminalEducations = (): JSX.Element => {
   const data = [
     {
@@ -18,7 +16,7 @@ const TerminalEducations = (): JSX.Element => {
   return (
     <ol className="mb-1 pl-4">
       {data.map((education) => (
-        <li key={uuidv4()} className="mb-1">
+        <li key={education.id} className="mb-1">
           <h1 data-testid="school-name">{education.attributes.name}</h1>
           <div className="flex flex-col pl-4">
             <span data-testid="majors">{education.attributes.major}</span>

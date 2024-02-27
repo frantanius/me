@@ -5,7 +5,7 @@ import TerminalExperience from '@/components/ui/terminal/terminalExperience';
 import TerminalHelp from '@/components/ui/terminal/terminalHelp';
 import TerminalSkills from '@/components/ui/terminal/terminalSkills';
 import TerminalSummary from '@/components/ui/terminal/terminalSummary';
-import useTerminalStore from '@/stores/terminal-store';
+import useTerminalStore from '@/components/ui/terminal/terminal-store';
 
 type CommandHandlers = (index: number, input: string) => void;
 

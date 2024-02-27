@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const TerminalExperience = (): JSX.Element => {
   let data = [
     {
@@ -46,8 +44,8 @@ const TerminalExperience = (): JSX.Element => {
 
   return (
     <ol className="mb-1 pl-4">
-      {data?.map((experience) => (
-        <li className="mb-2" key={uuidv4()}>
+      {data?.map((experience, idx) => (
+        <li className="mb-2" key={idx}>
           <h1>{experience.role}</h1>
           <div className="flex flex-col pl-4">
             <h2>

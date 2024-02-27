@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const TerminalContact = (): JSX.Element => {
   const contacts = [
     {
@@ -19,7 +17,7 @@ const TerminalContact = (): JSX.Element => {
   return (
     <ol className="mb-1 pl-4">
       {contacts.map((contact) => (
-        <li key={uuidv4()}>
+        <li key={contact.name}>
           <a
             href={contact.link}
             target="_blank"

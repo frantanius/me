@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import TerminalAscii from '@/components/ui/terminal/terminalAscii';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 let load = true;
 
@@ -12,10 +13,10 @@ const TerminalHelp = (): JSX.Element => {
 
   return (
     <div className="flex gap-8">
-      {load && <TerminalAscii />}
+      <TerminalAscii isInitial={load} />
       <div className="flex flex-col">
-        <span className="text-accent-1">version 14.0.4</span>
-        <span>--------------</span>
+        <span className="flex items-center gap-1 text-accent-1 text-customGreen"><TbBrandNextjs />version 14.0.4</span>
+        <span>-----------------</span>
         <span className="text-accent-1 text-customGreen">usage:</span>
         <span className="pl-4">fe [option]</span>
         <div className="mt-2">

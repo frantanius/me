@@ -1,8 +1,9 @@
 'use client';
 
-import { ClassName } from '@/types';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import { type ReactNode } from 'react';
+
+type ClassName = string | undefined;
 
 interface Props {
   children: ReactNode;
