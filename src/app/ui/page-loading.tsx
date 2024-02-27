@@ -1,0 +1,12 @@
+import LucideIcon from '@/app/ui/lucide-icon';
+
+export const PageLoading = () => {
+  return (
+    <div className="flex-1 flex items-center justify-center">
+      <LucideIcon
+        name="loader-2"
+        className="w-10 h-10 animate-spin text-muted-foreground"
+      />
+    </div>
+  );
+};

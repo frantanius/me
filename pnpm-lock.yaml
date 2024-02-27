@@ -92,9 +92,6 @@ dependencies:
   remark-gfm:
     specifier: ^4.0.0
     version: 4.0.0
-  uuid:
-    specifier: ^9.0.1
-    version: 9.0.1
   zustand:
     specifier: ^4.5.1
     version: 4.5.1(@types/react@18.2.37)(react@18.2.0)
@@ -112,9 +109,6 @@ devDependencies:
   '@types/react-dom':
     specifier: 18.2.15
     version: 18.2.15
-  '@types/uuid':
-    specifier: ^9.0.8
-    version: 9.0.8
   '@vercel/style-guide':
     specifier: ^5.2.0
     version: 5.2.0(eslint@8.53.0)(prettier@3.2.5)(typescript@5.2.2)
@@ -2715,13 +2709,6 @@ packages:
         integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==,
       }
     dev: false
-
-  /@types/uuid@9.0.8:
-    resolution:
-      {
-        integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==,
-      }
-    dev: true
 
   /@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.53.0)(typescript@5.2.2):
     resolution:
@@ -9783,14 +9770,6 @@ packages:
     resolution:
       {
         integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==,
-      }
-    hasBin: true
-    dev: false
-
-  /uuid@9.0.1:
-    resolution:
-      {
-        integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==,
       }
     hasBin: true
     dev: false

@@ -7,9 +7,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/atoms/accordion';
-import { AsideLink } from '@/components/atoms/aside-link';
-import { FadeInStagger, FadeIn } from '@/components/atoms/fade-in';
+} from '@/app/ui/accordion';
+import { AsideLink } from '@/app/ui/aside-link';
+import { FadeInStagger, FadeIn } from '@/app/ui/fade-in';
 
 const contactsData = [
   {

@@ -1,7 +1,7 @@
-import { FadeIn } from '@/components/atoms/fade-in';
-import { GridPattern } from '@/components/atoms/grid-pattern';
-import { AnimatedName } from '@/components/molecules/animated-name';
-import Terminal from '@/components/ui/terminal/terminal';
+import { FadeIn } from '@/app/ui/fade-in';
+import { GridPattern } from '@/app/ui/grid-pattern';
+import { AnimatedName } from '@/app/ui/home/animated-name';
+import Terminal from '@/app/ui/home/terminal/terminal';
 
 export default function Home() {
   return (
