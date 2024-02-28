@@ -40,8 +40,8 @@ export const navMenu = [
     name: '_projects',
     path: '/projects',
   },
-  // {
-  //   name: '_contact-me',
-  //   path: '/contact',
-  // },
+  {
+    name: '_contact-me',
+    path: '/contact',
+  },
 ];
