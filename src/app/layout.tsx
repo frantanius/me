@@ -43,8 +43,12 @@ export default function RootLayout({
             <Footer />
           </main>
         </ThemeWrapper>
-        <SpeedInsights />
-        <Analytics />
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <SpeedInsights />
+            <Analytics />
+          </>
+        )}
       </body>
     </html>
   );
