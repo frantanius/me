@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
 type State = {
   formData: {
@@ -6,11 +6,11 @@ type State = {
     email: string;
     message: string;
   };
-}
+};
 
 type Action = {
   setFormData: (formData: Partial<State['formData']>) => void;
-}
+};
 
 const useStore = create<State & Action>((set) => ({
   formData: {
@@ -18,12 +18,13 @@ const useStore = create<State & Action>((set) => ({
     email: '',
     message: '',
   },
-  setFormData: (formData) => set((state) => ({
-    formData: {
-      ...state.formData,
-      ...formData,
-    },
-  })),
+  setFormData: (formData) =>
+    set((state) => ({
+      formData: {
+        ...state.formData,
+        ...formData,
+      },
+    })),
 }));
 
 export default useStore;

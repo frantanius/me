@@ -9,6 +9,7 @@ import { ThemeWrapper } from '@/app/ui/theme-wrapper';
 import { Navbar } from '@/app/ui/layout/navbar';
 import { NavbarMobile, NavbarProvider } from '@/app/ui/layout/navbar-mobile';
 import { Footer } from '@/app/ui/layout/footer';
+import { Toaster } from '@/app/ui/toast/toaster';
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </main>
+          <Toaster />
         </ThemeWrapper>
         {process.env.NODE_ENV === 'production' && (
           <>

@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from "react-hook-form"
+import { useForm } from 'react-hook-form';
 import useStore from '@/app/contact/store';
 import { Button } from '@/app/ui/button';
 import {
@@ -16,6 +16,7 @@ import {
 } from '@/app/ui/form';
 import { Input } from '@/app/ui/input';
 import { Textarea } from '@/app/ui/textarea';
+import { useToast } from '@/app/ui/toast/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -40,25 +41,32 @@ export default function ContactForm() {
       email: '',
       message: '',
     },
-  })
+  });
 
   const formData = form.watch();
-  const setFormData = useStore(state => state.setFormData);
+  const setFormData = useStore((state) => state.setFormData);
+  const { toast } = useToast();
 
-  const onSubmit = async(data: z.infer<typeof formSchema>) => {
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       const res = await fetch('/api/email', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
-      console.log(res);
+
+      const result = await res.json();
+
+      if (res.ok) {
+        toast({ description: result.message });
+        form.reset();
+      }
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   useEffect(() => {
     setFormData(formData);
